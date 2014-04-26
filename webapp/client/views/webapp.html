@@ -9,22 +9,9 @@
 <template name="content">
   <div class="container">
     {{#unless currentUser}}
-      <div class="hero-unit text-center">
-        <h1>Welcome!</h1>
-        <p>{{> loginButtons}}</p>
-      </div>
+      {{> loginButtons}}
     {{else}}
-      <div class="navbar">
-        <div class="navbar-inner">
-          <span class="brand">
-            Convernt GitHub Issue to Pull Request
-          </span>
-          <ul class="nav pull-right">
-            <li>{{> loginButtons}}</li>
-          </ul>
-        </div>
-      </div>
-
+      {{> loginButtons}}
       {{> issue_to_pr}}
     {{/unless}}
   </div>
