@@ -7,18 +7,16 @@
 </body>
 
 <template name="content">
-  <div class="container">
-    {{#unless currentUser}}
-      {{> loginButtons}}
-    {{else}}
-      {{> loginButtons}}
-      {{> issue_to_pr}}
-    {{/unless}}
-  </div>
+  {{#unless currentUser}}
+    {{> loginButtons}}
+  {{else}}
+    {{> loginButtons}}
+    {{> issue_to_pr}}
+  {{/unless}}
 </template>
 
 <template name="issue_to_pr">
-  <form role="form">
+  <form class="form-inline">
     <input type="text" id="user" placeholder="User">
     <input type="text" id="repo" placeholder="Repo">
     <input type="text" id="issue-number" placeholder="Issue number">
