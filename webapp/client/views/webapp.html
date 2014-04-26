@@ -1,0 +1,44 @@
+<head>
+  <title>Convert GitHub Issue to Pull Request</title>
+</head>
+
+<body>
+  {{> content}}
+</body>
+
+<template name="content">
+  <div class="container">
+    {{#unless currentUser}}
+      <div class="hero-unit text-center">
+        <h1>Welcome!</h1>
+        <p>{{> loginButtons}}</p>
+      </div>
+    {{else}}
+      <div class="navbar">
+        <div class="navbar-inner">
+          <span class="brand">
+            Convernt GitHub Issue to Pull Request
+          </span>
+          <ul class="nav pull-right">
+            <li>{{> loginButtons}}</li>
+          </ul>
+        </div>
+      </div>
+
+      {{> issue_to_pr}}
+    {{/unless}}
+  </div>
+</template>
+
+<template name="issue_to_pr">
+  <form role="form">
+    <input type="text" id="user" placeholder="User">
+    <input type="text" id="repo" placeholder="Repo">
+    <input type="text" id="issue-number" placeholder="Issue number">
+    <input type="text" id="base" placeholder="Base branch">
+    <input type="text" id="head" placeholder="Head branch">
+    <button type="button" class="btn btn-success" id="convert">
+      Convert
+    </button>
+  </form>
+</template>
