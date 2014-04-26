@@ -1,7 +1,7 @@
 issue-to-pr
 ===========
 
-Convert a github issue to pull request in browser.
+Convert a GitHub issue to pull request in browser.
 
 ## Usage
 Go to http://i2pr.meteor.com.
