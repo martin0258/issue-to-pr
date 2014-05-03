@@ -16,14 +16,43 @@
 </template>
 
 <template name="issue_to_pr">
-  <form class="form-inline">
-    <input type="text" id="user" placeholder="User">
-    <input type="text" id="repo" placeholder="Repo">
-    <input type="text" id="issue-number" placeholder="Issue number">
-    <input type="text" id="base" placeholder="Base branch">
-    <input type="text" id="head" placeholder="Head branch">
-    <button type="button" class="btn btn-success" id="convert">
-      Convert
-    </button>
+  <form class="form-horizontal">
+    <div class="control-group">
+      <label class="control-label" for="issue-url">Issue URL</label>
+      <div class="controls">
+        <input type="text" id="issue-url" class="input-xxlarge">
+        <span class="help-block">
+          Example: https://github.com/SkysourceRepo/ER-Bonus-System/issues/777
+        </span>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="base">Base Branch</label>
+      <div class="controls">
+        <input type="text" id="base" class="input-xxlarge">
+        <span class="help-block">
+          Example: master
+        </span>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="head">Head Branch</label>
+      <div class="controls">
+        <input type="text" id="head" class="input-xxlarge">
+        <span class="help-block">
+          Example: master-hotfix
+        </span>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <div class="controls">
+        <button type="button" class="btn btn-success" id="convert">
+          Convert
+        </button>
+      </div>
+    </div>
   </form>
 </template>
